@@ -1,0 +1,93 @@
+.experience {
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: $main-color;
+                border-radius: 100%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    position: absolute;
+                    top: -16px;
+                    left: 0;
+                    background-color: black;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            height: 1px;
+            width: 45px;
+            position: absolute;
+            background-color: #000;
+            top: 47px;
+        }
+
+        &-head {
+            position: relative;
+            padding: 25px 0 0 99px;
+
+            h4 {
+                margin: 0;
+            }
+        }
+
+        &-body {
+            padding: 12px 0 0 43px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &-icon {
+            position: absolute;
+            top: 30px;
+            left: 45px;
+            @include before_circle;
+
+            img {
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+        }
+
+        &-location {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+    }
+}
